@@ -1,0 +1,6 @@
+<div class="form-group" *ngIf="categories" >
+  <label for="c">Category</label>
+  <select [(ngModel)] = "selectedCat" class="form-control" name="c" id="c">
+    <option *ngFor="let category of categories" [(ngValue)]="category.categoryName"> {{category.categoryName}}</option>
+  </select>
+</div>

@@ -1,0 +1,6 @@
+<div class="form-group" *ngIf="peopleList">
+  <label for="p"> Person </label>
+  <select [(ngModel)]="person" class="form-control" name="p" id="p" >
+    <option *ngFor="let person of peopleList" [(ngValue)] = "person.name"> {{person.name}} </option>
+  </select>
+</div>

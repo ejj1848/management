@@ -1,0 +1,13 @@
+<ul class="list-group">
+  <li *ngFor="let task of tasks" class="list-group-item">
+    <span class="badge badge-danger"> {{task.category.categoryName}}</span>
+    <div class="task-checkbox">
+      <input type="checkbox"
+             class="list-child"
+             (change)="onTaskChange($event,task)"
+             [checked]="task.isCompleted">
+      <span ngClass="{{task.isCompleted ? 'description isCompleted' : 'description'}}">{{ task.description }}</span>
+      <span class="badge {{getDueDateLabel(task)}} float-right"> {{task.dueDate}}</span>
+    </div>
+  </li>
+</ul>
