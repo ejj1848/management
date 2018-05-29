@@ -16,6 +16,7 @@ import {PersonService} from "./service/person.service";
 import {CatergoyService} from "./service/catergoy.service";
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { TaskSearchComponent } from './component/task-search/task-search.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
     CategoryComponent,
     CategoryListComponent,
     PeopleListComponent,
-    DashboardComponent
+    DashboardComponent,
+    TaskSearchComponent
   ],
   imports: [
     BrowserModule,

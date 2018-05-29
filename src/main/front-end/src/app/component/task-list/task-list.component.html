@@ -1,4 +1,5 @@
-<ul class="list-group">
+<div class="container">
+  <ul class="list-group">
   <li *ngFor="let task of tasks" class="list-group-item">
     <span class="badge badge-danger"> {{task.category.categoryName}}</span>
     <div class="task-checkbox">
@@ -11,3 +12,4 @@
     </div>
   </li>
 </ul>
+</div>

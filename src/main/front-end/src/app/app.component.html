@@ -3,10 +3,16 @@
   <h1>
     Eric Johnson's Task {{ title }}!
   </h1>
+  &nbsp;
+  <div class="container">
+    <button class="btn-primary" routerLink="/dashboard">Dashboard</button>
+    <button class="btn-primary" routerLink="/tasks">Tasks</button>
+    <button class="btn-primary" routerLink="/addTask">Add Task</button>
+  </div>
+  &nbsp;
 </div>
-<div class="container">
-  <app-task></app-task>
-</div>
+
+<router-outlet></router-outlet>
 
 
 

@@ -16,7 +16,6 @@ public class TaskRest {
 
     @GetMapping(value = "/")
     public Iterable<Task> getAllTasks() {
-        System.out.println(taskService.findAllTasks());
         return taskService.findAllTasks();
 
     }
