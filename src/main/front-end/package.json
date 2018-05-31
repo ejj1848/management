@@ -22,11 +22,11 @@
     "@angular/platform-browser": "^5.2.11",
     "@angular/platform-browser-dynamic": "^5.2.11",
     "@angular/router": "^5.2.11",
-    "angularfire2": "^5.0.0-rc.9",
+    "angularfire2": "^5.0.0-rc.10",
     "bootstrap": "^4.1.1",
-    "core-js": "^2.4.1",
-    "firebase": "^5.0.3",
-    "rxjs": "^5.5.6",
+    "core-js": "^2.5.7",
+    "firebase": "^5.0.4",
+    "rxjs": "^5.5.11",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {

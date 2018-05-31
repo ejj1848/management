@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TaskService} from "../../service/task.service";
 import {Task} from "../../domain/task";
 
@@ -8,7 +8,6 @@ import {Task} from "../../domain/task";
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-
 
 
   tasks: Task[] = [];
@@ -34,12 +33,12 @@ export class TaskListComponent implements OnInit {
     );
   }
 
-  getDueDateLabel(task: Task){
+  getDueDateLabel(task: Task) {
     return task.isCompleted ? 'badge-success' : 'badge-primary';
   }
 
   onTaskChange(event, task) {
     console.log(task);
-    this.taskService.saveTask(task,event.target.checked).subscribe();
+    this.taskService.saveTask(task, event.target.checked).subscribe();
   }
 }

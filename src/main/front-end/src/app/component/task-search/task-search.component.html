@@ -1,12 +1,22 @@
-<div id=search-component>
+<div id=search-component class="container float-left"  >
   <input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
-
-  <ul class="search-result">
-    <li *ngFor="let task of tasks$ | async">
-      <a routerLink="/task/{{task.id}}">
-        {{task.name}}
-      </a>
-    </li>
-  </ul>
-
 </div>
+&nbsp;
+&nbsp;
+&nbsp;
+
+  <div class="container">
+    <ul class="list-group">
+      <li *ngFor="let task of tasks$ |  async " class="list-group-item">
+        <span class="badge badge-danger"> {{task.category.categoryName}}</span>
+        <div class="task-checkbox">
+          <input type="checkbox"
+                 class="list-child"
+                 (change)="onTaskChange($event,task)"
+                 [checked]="task.isCompleted">
+          <span ngClass="{{task.isCompleted ? 'description isCompleted' : 'description'}}">{{ task.description }}</span>
+          <span class="badge {{getDueDateLabel(task)}} float-right"> {{task.dueDate}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>

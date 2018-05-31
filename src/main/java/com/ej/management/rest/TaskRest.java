@@ -4,14 +4,18 @@ import com.ej.management.domain.Task;
 import com.ej.management.service.TaskService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/task")
 public class TaskRest {
 
     private TaskService taskService;
 
+
     public TaskRest(TaskService taskService) {
         this.taskService = taskService;
+
     }
 
     @GetMapping(value = "/")
@@ -23,6 +27,17 @@ public class TaskRest {
     @GetMapping(value = "/{taskId}")
     public Task getTaskById(@PathVariable Long taskId) {
         return taskService.findTaskById(taskId).orElseGet(Task::new);
+    }
+
+    @GetMapping(value = "/person/{personName}")
+    public List<Task> getTasksByPerson(@PathVariable String personName) {
+
+        return taskService.listTasksByPeople(personName);
+    }
+
+    @GetMapping(value = "/category/{categoryName}")
+    public List<Task> getTasksByCategory(@PathVariable String categoryName) {
+        return taskService.listTasksByCategory(categoryName);
     }
 
 

@@ -17,6 +17,7 @@ import {CatergoyService} from "./service/catergoy.service";
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TaskSearchComponent } from './component/task-search/task-search.component';
+import { CategorySearchComponent } from './component/category-search/category-search.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { TaskSearchComponent } from './component/task-search/task-search.compone
     CategoryListComponent,
     PeopleListComponent,
     DashboardComponent,
-    TaskSearchComponent
+    TaskSearchComponent,
+    CategorySearchComponent
   ],
   imports: [
     BrowserModule,

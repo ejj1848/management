@@ -2,6 +2,7 @@ package com.ej.management.service;
 
 import com.ej.management.domain.Category;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface CategoryService {
@@ -11,4 +12,5 @@ public interface CategoryService {
     Iterable<Category> findAllCategories();
     Iterable<Category> saveCategoriesList(Iterable<Category> categories);
     void deleteCategory(Long id);
+    Category findByCategoryName(String name);
 }

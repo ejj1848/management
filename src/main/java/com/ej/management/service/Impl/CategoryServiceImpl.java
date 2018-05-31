@@ -6,6 +6,7 @@ import com.ej.management.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -35,6 +36,11 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public Iterable<Category> saveCategoriesList(Iterable<Category> categories) {
         return categoryRepository.saveAll(categories);
+    }
+
+    @Override
+    public Category findByCategoryName(String name) {
+        return categoryRepository.findByCategoryName(name);
     }
 
     @Override

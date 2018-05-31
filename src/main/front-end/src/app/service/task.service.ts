@@ -2,11 +2,15 @@ import "rxjs/Rx";
 import {EventEmitter, Injectable} from "@angular/core";
 import {Task} from "../domain/task";
 import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs/Observable";
+import {of} from "rxjs/observable/of";
 
 @Injectable()
 export class TaskService {
 
   onTaskAdded = new EventEmitter<Task>();
+
+  tasks: Task[] = [];
 
   private url = '/api/task/';
 
@@ -14,11 +18,13 @@ export class TaskService {
   }
 
   getTasks() {
-    return this.http.get(this.url)
+
+    return this.http.get(this.url);
+
   }
 
-  getSingleTask(id: Number){
-    return this.http.get(this.url +"/"+id);
+  getSingleTask(id: Number) {
+    return this.http.get(this.url + id);
   }
 
 
@@ -41,6 +47,27 @@ export class TaskService {
 
     return this.http.post(this.url, task)
 
+
+  }
+
+  searchTasksByPerson(term: string): Observable<Task[]> {
+    if (!term.trim()) {
+      // if not search term, return empty task array.
+      return of([]);
+    }
+
+    return this.http.get<Task[]>(this.url + "/person/" + term);
+
+  }
+
+  searchTasksByCategory(categoryTerm: string): Observable<any> {
+    if (!categoryTerm.trim()) {
+      // if not search term, return empty task array.
+      return of([]);
+    }
+    console.log(categoryTerm)
+
+    return this.http.get(this.url + "/category/" + categoryTerm);
 
   }
 

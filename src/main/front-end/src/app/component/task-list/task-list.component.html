@@ -8,8 +8,24 @@
              (change)="onTaskChange($event,task)"
              [checked]="task.isCompleted">
       <span ngClass="{{task.isCompleted ? 'description isCompleted' : 'description'}}">{{ task.description }}</span>
-      <span class="badge {{getDueDateLabel(task)}} float-right"> {{task.dueDate}}</span>
+      <span class="badge {{getDueDateLabel(task)}} float-right"> {{task.dueDate| date}}</span>
     </div>
   </li>
 </ul>
+  &nbsp;
+  &nbsp;
+  <div class="container">
+  <label for="task-search"> Sort By Person</label>
+  <div class="container" id="task-search">
+    <app-task-search></app-task-search>
+  </div>
+  </div>
+
+  <div class="container">
+    <label for="category-search"> Sort By Category</label>
+    <div class="container" id="category-search">
+      <app-category-search></app-category-search>
+    </div>
+  </div>
 </div>
+
