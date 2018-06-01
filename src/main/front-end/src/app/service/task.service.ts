@@ -23,7 +23,7 @@ export class TaskService {
 
   }
 
-  getSingleTask(id: Number) {
+  getSingleTask(id: number) {
     return this.http.get(this.url + id);
   }
 
@@ -65,7 +65,6 @@ export class TaskService {
       // if not search term, return empty task array.
       return of([]);
     }
-    console.log(categoryTerm)
 
     return this.http.get(this.url + "/category/" + categoryTerm);
 

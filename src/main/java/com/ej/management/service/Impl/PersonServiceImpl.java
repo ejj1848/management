@@ -18,7 +18,10 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public Person savePerson(Person person) {
+    public Person savePerson(Person person){
+        if (personRepository.existsByName(person.getName())) {
+           return personRepository.findByName(person.getName());
+        }
         return personRepository.save(person);
     }
 

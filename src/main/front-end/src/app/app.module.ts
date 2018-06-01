@@ -18,6 +18,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TaskSearchComponent } from './component/task-search/task-search.component';
 import { CategorySearchComponent } from './component/category-search/category-search.component';
+import { PersonAddComponent } from './component/person-add/person-add.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CategorySearchComponent } from './component/category-search/category-se
     PeopleListComponent,
     DashboardComponent,
     TaskSearchComponent,
-    CategorySearchComponent
+    CategorySearchComponent,
+    PersonAddComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,7 @@ import { CategorySearchComponent } from './component/category-search/category-se
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [TaskService,PersonService, CatergoyService],
+  providers: [TaskService, PersonService, CatergoyService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
