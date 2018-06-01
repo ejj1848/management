@@ -22,8 +22,7 @@ export class PersonService {
   }
 
   addPerson(person: Person) {
-    console.log(person);
-    return this.http.post(this.url, person)
+    return this.http.post(this.url, person).subscribe()
   }
 
 }

@@ -20,6 +20,9 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Category saveCategory(Category category) {
+        if(categoryRepository.existsByCategoryName(category.getCategoryName())){
+            return categoryRepository.findByCategoryName(category.getCategoryName());
+        }
         return categoryRepository.save(category);
     }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PersonService} from "../../service/person.service";
 import {Person} from "../../domain/person";
 
@@ -10,19 +10,18 @@ import {Person} from "../../domain/person";
 export class PersonAddComponent implements OnInit {
 
 
-  person: Person ={
-    name:''
+  person: Person = {
+    name: ''
   };
 
-  constructor(private personService: PersonService) { }
+  constructor(private personService: PersonService) {
+  }
 
   ngOnInit() {
   }
 
-  onPersonSubmit(){
-    this.personService.addPerson(this.person)
-      .subscribe()
-
+  onPersonSubmit() {
+    this.personService.addPerson(this.person);
   }
 
 

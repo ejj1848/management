@@ -23,7 +23,6 @@ export class TaskListComponent implements OnInit {
         (tasks: Task[]) => {
           this.tasks = tasks
 
-          console.log(this.tasks)
         },
         (error) => console.log(error)
       );

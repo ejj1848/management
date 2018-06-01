@@ -19,6 +19,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { TaskSearchComponent } from './component/task-search/task-search.component';
 import { CategorySearchComponent } from './component/category-search/category-search.component';
 import { PersonAddComponent } from './component/person-add/person-add.component';
+import { CategoryAddComponent } from './component/category-add/category-add.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { PersonAddComponent } from './component/person-add/person-add.component'
     DashboardComponent,
     TaskSearchComponent,
     CategorySearchComponent,
-    PersonAddComponent
+    PersonAddComponent,
+    CategoryAddComponent
   ],
   imports: [
     BrowserModule,
