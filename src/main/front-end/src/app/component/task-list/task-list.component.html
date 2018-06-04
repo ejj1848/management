@@ -1,24 +1,24 @@
 <div class="container">
   <ul class="list-group">
-  <li *ngFor="let task of tasks" class="list-group-item">
-    <span class="badge badge-danger"> {{task.category.categoryName}}</span>
-    <div class="task-checkbox">
-      <input type="checkbox"
-             class="list-child"
-             (change)="onTaskChange($event,task)"
-             [checked]="task.isCompleted">
-      <span ngClass="{{task.isCompleted ? 'description isCompleted' : 'description'}}">{{ task.description }}</span>
-      <span class="badge {{getDueDateLabel(task)}} float-right"> {{task.dueDate| date}}</span>
-    </div>
-  </li>
-</ul>
+    <li *ngFor="let task of tasks" class="list-group-item">
+      <span class="badge badge-danger"> {{task.category.categoryName}}</span>
+      <div class="task-checkbox">
+        <input type="checkbox"
+               class="list-child"
+               (change)="onTaskChange($event,task)"
+               [checked]="task.isCompleted">
+        <span ngClass="{{task.isCompleted ? 'description isCompleted' : 'description'}}">{{ task.description }}</span>
+        <span class="badge {{getDueDateLabel(task)}} float-right"> {{task.dueDate| date}}</span>
+      </div>
+    </li>
+  </ul>
   &nbsp;
   &nbsp;
   <div class="container">
-  <label for="task-search"> Sort By Person</label>
-  <div class="container" id="task-search">
-    <app-task-search></app-task-search>
-  </div>
+    <label for="task-search"> Sort By Person</label>
+    <div class="container" id="task-search">
+      <app-task-search></app-task-search>
+    </div>
   </div>
 
   <div class="container">
