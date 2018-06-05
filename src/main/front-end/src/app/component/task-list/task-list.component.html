@@ -9,6 +9,7 @@
                [checked]="task.isCompleted">
         <span ngClass="{{task.isCompleted ? 'description isCompleted' : 'description'}}">{{ task.description }}</span>
         <span class="badge {{getDueDateLabel(task)}} float-right"> {{task.dueDate| date}}</span>
+
       </div>
     </li>
   </ul>

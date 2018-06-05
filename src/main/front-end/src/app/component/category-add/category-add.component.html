@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="form-group">
+    <form (ngSubmit)="onCategorySubmit()" autocomplete="off">
+      <div class="form-group">
+        <input [(ngModel)]="category.categoryName"
+               type="text" name="categoryName"
+               class="form-control"
+               placeholder="Add New Category">
+      </div>
+      <button type="submit" class="btn btn-primary">Add Category</button>
+    </form>
+  </div>
+</div>
+

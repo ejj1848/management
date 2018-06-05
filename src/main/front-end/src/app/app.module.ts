@@ -20,6 +20,7 @@ import { TaskSearchComponent } from './component/task-search/task-search.compone
 import { CategorySearchComponent } from './component/category-search/category-search.component';
 import { PersonAddComponent } from './component/person-add/person-add.component';
 import { CategoryAddComponent } from './component/category-add/category-add.component';
+import { TaskModalComponent } from './component/task-modal/task-modal.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { CategoryAddComponent } from './component/category-add/category-add.comp
     TaskSearchComponent,
     CategorySearchComponent,
     PersonAddComponent,
-    CategoryAddComponent
+    CategoryAddComponent,
+    TaskModalComponent
   ],
   imports: [
     BrowserModule,
